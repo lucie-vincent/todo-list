@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+#wrapper {
+    min-height: 100vh; 
+    min-width: 100vh;
+}
+
+h1 {
+    margin: 1em 0em;
+}
+
+button {
+    width: 100%;
+    margin: 0.5em 0em;
+}
+
+.todoCards {
+    width: 100%;
+}
+
+.todoCard {
+    width: 33%;
+}
+
+i {
+   color: black;
+   font-size: large;
+}
