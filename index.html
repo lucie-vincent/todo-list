@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Todo List</h1>
+
+        <div id="todo">
+            <div id="count"></div>
+            <button id="btn" >Add a task</button>
+            <div id="todoCards">
+                <div class="todoCard">
+                    <!-- élément <textarea> permet éditer du texte sur plsrs lignes 
+                    maxlength défini nbr max caractères
+                    row et cols définissent taille exacte de <textarea>
+                    -->
+                    <textarea class="task" maxlength="200" cols="20" rows="15"></textarea>
+                    <!-- aria-hidden : Accessible Rich Internet Applications : permet +
+                    accessibilté => aria-hidden = contenu n'est pas rendu -->
+                    <span class="delBtn"><i class="fa-solid fa-trash-can" aria-hidden="true" ></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js" ></script>
+</body>
+</html>
