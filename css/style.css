@@ -18,15 +18,24 @@ button {
     margin: 0.5em 0em;
 }
 
-.todoCards {
+#todoCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
 .todoCard {
     width: 33%;
+    position: relative;
 }
 
 i {
-   color: black;
-   font-size: large;
+    position: absolute;
+    bottom: 8px;
+    right: 25px;
+    color: black;
+    font-size: 25px;
 }
