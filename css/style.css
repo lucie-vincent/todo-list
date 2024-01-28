@@ -13,7 +13,7 @@ h1 {
     margin: 1em 0em;
 }
 
-button {
+button#btn {
     width: 100%;
     margin: 0.5em 0em;
 }
@@ -28,14 +28,18 @@ button {
 }
 
 .todoCard {
-    width: 33%;
     position: relative;
+    margin:0.5em;
 }
 
-i {
+textarea {
+    padding: 2px 5px;
+}
+
+.delBtn i.my-trash-can {
     position: absolute;
     bottom: 8px;
-    right: 25px;
+    right: 10px;
     color: black;
-    font-size: 25px;
+    font-size: 1em;
 }
