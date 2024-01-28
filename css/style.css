@@ -18,6 +18,10 @@ button#btn {
     margin: 0.5em 0em;
 }
 
+button#btn:hover {
+    cursor: pointer;
+}
+
 #todoCards {
     display: flex;
     flex-direction: row;
@@ -42,4 +46,8 @@ textarea {
     right: 10px;
     color: black;
     font-size: 1em;
+}
+
+.delBtn i.my-trash-can:hover {
+    cursor: pointer;
 }

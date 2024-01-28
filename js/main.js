@@ -5,7 +5,7 @@
 const addBtn = document.querySelector("#btn");
 const taskCard = document.querySelector(".todoCard");
 const taskContainer = document.querySelector("#todoCards");
-// const delBtn = document.querySelector(".delBtn");
+const delBtn = document.querySelector(".delBtn");
 
 function addTask() {
     // la méthode cloneNode() renvoie une copie du noeud sur lequel 
@@ -15,10 +15,13 @@ function addTask() {
     //clone la todoCard (taskCard)
     const newTask = taskCard.cloneNode(true);    
     
-    // on ajoute le bouton dans la fct ajout de card pour faire fonctionner
-    // les boutons de suppressions dans les nvlles cards
-    // const newDelBtn = newTask.querySelector(".delBtn");
-    // console.log(newDelBtn);
+    // on récupère le nouveau bouton de suppression
+    // puis on assigne un eventListener à ce nouveau bouton
+    const newDelBtn = newTask.querySelector(".delBtn");
+    newDelBtn.addEventListener('click', function() {
+        deleteTask(newTask);
+    });
+
 
     // on récupère la nouvelle textarea 
     // puis on assigne le text de la nouvelle card en "New Task"
@@ -27,9 +30,6 @@ function addTask() {
 
     // on ajoute écouteur d'événement sur le nouveau bouton de la nouvelle
     // tache
-    //newDelBtndelBtn.addEventListener('click', function() {
-        //deleteTask(newTask)
-    //});
 
     // on ajoute la nouvelle task créée en tant qu'enfant du taskContainer
     // !! on ajoute la nouvelle carte dans le DOM parce le taskContainer fait déjà partie du DOM
@@ -37,9 +37,9 @@ function addTask() {
 }
 
 
-// function deleteTask(task) {
-//     task.remove();  // methode qui retire élément du DOM
-// }
+function deleteTask(taskToDelete) {
+    taskToDelete.remove();  // methode qui retire élément du DOM
+}
 
 // // EventTarget = interface DOM implémentée par des objets qui peuvent 
 // // recevoir des évènements 
@@ -50,6 +50,8 @@ function addTask() {
 // // listener = objet qui recevera un évènement lsq évènement spécifié se 
 // // produit => ici, argument est une function 
 addBtn.addEventListener('click', addTask);
-// delBtn.addEventListener('click', deleteTask);
+delBtn.addEventListener('click', function() {
+    deleteTask(taskCard);
+});
 
 
